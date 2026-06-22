@@ -30,12 +30,29 @@ h1 {
   letter-spacing: 0.12em;
 }
 
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 48px;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  object-position: center 35%;
+  border: 6px solid #f3ece3;
+  border-radius: 120px 120px 16px 16px;
+  box-shadow: 0 16px 36px rgb(92 75 61 / 14%);
+}
+
 p {
   margin: 8px 0;
   line-height: 1.8;
 }
 
-header > p:first-child {
+.hero-copy > p:first-child {
   margin-bottom: 12px;
   color: #a58b73;
   font-size: 12px;
@@ -168,5 +185,15 @@ article > p:last-child {
 
   .project-list {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .profile-photo {
+    width: 160px;
+    height: 200px;
   }
 }
